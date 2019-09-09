@@ -12,7 +12,9 @@ Building blocks:
     - Artisan 
         - implements the algorithms to perform commands/aggregates
         - builtin artisans for standard tasks like modifying attributes or state of entities
-- Command
+- Command: What to process/modify
+- Control: State changes of other components, e.g. if a user tends to modify an inputfield (focus), others gest informed
+that this field may me modified (like google docs, sheets)
 - Domain Event
 - Model
     - Entity
