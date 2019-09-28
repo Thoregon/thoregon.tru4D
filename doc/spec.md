@@ -7,6 +7,9 @@ Building blocks:
 - Context (Bounded Context)
     - can be wrappend as a component
     - contains at least one aggregate
+    - defines a section of another context 
+        - can be imagined simmilar to GraphQL, but can also reuse behavior
+    - In addition, the bounded context can be composed of several other contexts
 - Aggregates
     - comarable to a microservice 
     - Artisan 
