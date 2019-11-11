@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Thoregon/evolux.tru4D#readme",
   "dependencies": {
-    "evolux.supervise": "file:../evolux.supervise"
+    "cuid": "^2.1.6"
   },
   "devDependencies": {
     "esdoc": "^1.1.0",
