@@ -43,3 +43,7 @@ If it is an extension to another context it can provide where its plugs in
 
 A bounded context can be based on another (inherit), also reducing props and funcs.
 Bounded cotnexts can cooperate in a network manner.
+
+##Commands
+
+
