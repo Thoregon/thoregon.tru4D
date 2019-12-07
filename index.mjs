@@ -10,6 +10,8 @@ import Repository                       from "./lib/repository.mjs";
 
 export { default as Command }           from './lib/command/command.mjs';
 export { default as CreateCommand }     from './lib/command/createcommand.mjs';
+export { default as ModifyCommand }     from './lib/command/modifypropertycommand.mjs';
+export { default as CreateCommand }     from './lib/command/createcommand.mjs';
 
 
 export const service = {
