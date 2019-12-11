@@ -10,19 +10,19 @@ import Repository                       from "./lib/repository.mjs";
 
 export { default as Command }           from './lib/command/command.mjs';
 export { default as CreateCommand }     from './lib/command/createcommand.mjs';
-export { default as ModifyCommand }     from './lib/command/modifypropertycommand.mjs';
-export { default as CreateCommand }     from './lib/command/createcommand.mjs';
+export { default as ModifyCommand }     from './lib/command/modifycommand.mjs';
+export { default as DeleteCommand }     from './lib/command/deletecommand.mjs';
 
 
 export const service = {
     install() {
         console.log('** tru4d install()');
-        myevolux().dddd = new Repository();
+        myevolux().tru4d = new Repository();
     },
 
     uninstall() {
         console.log('** tru4d uninstall()');
-        delete myevolux().dddd;
+        delete myevolux().tru4d;
     },
 
     resolve() {
@@ -32,12 +32,12 @@ export const service = {
 
     start() {
         console.log('** tru4d start()');
-        // myevolux().dddd;
+        // myevolux().tru4d;
     },
 
     stop() {
         console.log('** tru4d stop()');
-        // myevolux().dddd;
+        // myevolux().tru4d;
     },
 
     update() {
