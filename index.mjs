@@ -4,16 +4,28 @@
  * @author: blukassen
  */
 
-import { myevolux }                     from '/evolux.universe';
+import { myevolux }                         from '/evolux.universe';
+import Repository                           from "./lib/repository.mjs";
 
-import Repository                       from "./lib/repository.mjs";
+/*
+ * basic commands
+ */
+export { default as Command }               from './lib/command/command.mjs';
+export { default as CreateCommand }         from './lib/command/createcommand.mjs';
+export { default as ModifyCommand }         from './lib/command/modifycommand.mjs';
+export { default as DeleteCommand }         from './lib/command/deletecommand.mjs';
+export { default as ActionCommand }         from './lib/command/actioncommand.mjs';
 
-export { default as Command }           from './lib/command/command.mjs';
-export { default as CreateCommand }     from './lib/command/createcommand.mjs';
-export { default as ModifyCommand }     from './lib/command/modifycommand.mjs';
-export { default as DeleteCommand }     from './lib/command/deletecommand.mjs';
+/*
+ * bounded context
+ */
+export { default as BoundedContext }        from './lib/boundedcontext.mjs';
+export { default as BoundedContextBuilder } from './lib/boundedcontextbuilder.mjs';
+export { default as Aggregate }             from './lib/aggregate.mjs';
 
-
+/*
+ * tru4d service
+ */
 export const service = {
     install() {
         console.log('** tru4d install()');
@@ -42,8 +54,5 @@ export const service = {
 
     update() {
         console.log('** tru4d update()');
-        this.stop();
-        this.uninstall();
-        this.install();
     }
 };
