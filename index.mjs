@@ -6,6 +6,7 @@
 
 import { myuniverse, myevolux }             from '/evolux.universe';
 import Repository                           from "./lib/repository.mjs";
+import BoundedContextBuilder                from "./lib/boundedcontextbuilder.mjs";
 
 /*
  * basic commands
@@ -20,8 +21,8 @@ export { default as ActionCommand }         from './lib/command/actioncommand.mj
  * bounded context
  */
 export { default as BoundedContext }        from './lib/boundedcontext.mjs';
-export { default as BoundedContextBuilder } from './lib/boundedcontextbuilder.mjs';
 export { default as Aggregate }             from './lib/aggregate.mjs';
+export default BoundedContextBuilder;
 
 /*
  * tru4d service
