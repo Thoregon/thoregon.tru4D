@@ -4,7 +4,7 @@
  * @author: blukassen
  */
 
-import { myuniverse, myevolux }             from '/evolux.universe';
+import { myuniverse, tservices }             from '/evolux.universe';
 import Repository                           from "./lib/repository.mjs";
 import BoundedContextBuilder                from "./lib/boundedcontextbuilder.mjs";
 
@@ -30,12 +30,12 @@ export default BoundedContextBuilder;
 export const service = {
     install() {
         myuniverse().logger.debug('** tru4d install()');
-        myevolux().tru4d = new Repository();
+        tservices().tru4d = new Repository();
     },
 
     uninstall() {
         myuniverse().logger.debug('** tru4d uninstall()');
-        delete myevolux().tru4d;
+        delete tservices().tru4d;
     },
 
     resolve() {
@@ -45,12 +45,12 @@ export const service = {
 
     start() {
         myuniverse().logger.debug('** tru4d start()');
-        // myevolux().tru4d;
+        // tservices().tru4d;
     },
 
     stop() {
         myuniverse().logger.debug('** tru4d stop()');
-        // myevolux().tru4d;
+        // tservices().tru4d;
     },
 
     update() {
