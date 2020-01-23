@@ -4,7 +4,7 @@
  * @author: blukassen
  */
 
-import { myuniverse, tservices }             from '/evolux.universe';
+import { myuniverse, tservices }            from '/evolux.universe';
 import Repository                           from "./lib/repository.mjs";
 import BoundedContextBuilder                from "./lib/boundedcontextbuilder.mjs";
 
