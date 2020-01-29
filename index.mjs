@@ -27,33 +27,5 @@ export default BoundedContextBuilder;
 /*
  * tru4d service
  */
-export const service = {
-    install() {
-        myuniverse().logger.debug('** tru4d install()');
-        tservices().tru4d = new Repository();
-    },
+export const service = new Repository();
 
-    uninstall() {
-        myuniverse().logger.debug('** tru4d uninstall()');
-        delete tservices().tru4d;
-    },
-
-    resolve() {
-        myuniverse().logger.debug('** tru4d resolve()');
-        // nothing to do
-    },
-
-    start() {
-        myuniverse().logger.debug('** tru4d start()');
-        // tservices().tru4d;
-    },
-
-    stop() {
-        myuniverse().logger.debug('** tru4d stop()');
-        // tservices().tru4d;
-    },
-
-    update() {
-        myuniverse().logger.debug('** tru4d update()');
-    }
-};
