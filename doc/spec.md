@@ -7,6 +7,9 @@ Implements a foundation to build an app or system following the 4D (distributed 
 
 Building blocks:
 - Responsibilities (this the the 'distributed' from the 4D)
+- Choreography --> [orchestration vs choreography](https://stackoverflow.com/questions/4127241/orchestration-vs-choreography)
+    - a context is built up from its parts (choreography)
+    - no dedicated composition for a context exists (orchestration)
 - Context (Bounded Context)
     - can be wrappend as a component
     - contains at least one aggregate
@@ -20,9 +23,16 @@ Building blocks:
         - will be distributed to all/responsible peers, responsible to update snapshots
         - builtin actors for standard tasks like modifying attributes or state of entities
 - Command: What to process/modify
-- Control: State changes of other components, e.g. if a user tends to modify an inputfield (focus), others gest informed
+    - Subclass one of the provided default commands
+    - Class --> Command Definition
+    - Instance --> Command
+- Control: State changes of other components, e.g. if a user tends to modify an inputfield (focus), others gets informed
 that this field may me modified (like google docs, sheets)
 - Domain Event
+- Actions
+    - can be attached to command and domain events
+    - run async, can't stop processing of a command or event
+    - define an escalation procedure
 - Model
     - Entity
     - Value Object
@@ -68,34 +78,43 @@ After a command is successfully processed, inform all interested listeners
 
 - 1 command -> commit
 - 2 store command in matter
+    - prepare, reject command on error
     - maintain command state: created/processing/[done/rejected]
-- 3 event command created (event sourcing) --> implicit
-    - event only where 'responsible'
-    - if the creating node is responsible exec action 
+- 3 actions for command created (event sourcing) --> implicit
+    - if the creating node is responsible exec action
 - 4 execute action (only one on one node)
-    - check prerequisites to exec command
-    - reject command on error
+    - all commands are executed, on error start escalation procedure
+    - actions may trigger long lasting processes, introduce your own state object and states
 - 5 create entries in matter
-- 6 store matching aggregate events in matter
-    - create of entities
-    - command performed -> defined implicitly by the command
-- 7 send dpmain event -> execute listeners on the events
+- 6 send dpmain event from bounded context -> execute listeners on the events
+    - register event listeners for 'boundedcontext' + 'eventname'
     - don't stop execution if one fails --> must be idempotent!
     - do proper logging!
     - from here again commands can be committed -> start at 1
     - event can also be subscribed by other bounded contexts 
 
+### Command Protocol
+
+- A command storage for every responsibility is established.
+- a set with 'pending' commands; todo: maintain right order!
+- a set with 'done' commands
+- a set with 'rejected' commands; todo: check if needed
+- each command has a 'state' (created, running, done, rejected)
+    - processors should only start with 'created' commands to avoid double processing
+    - if multiple actions are defined, all will be processed
+    - if one action throws, the command gets rejected
+        - all actions will be called again --> action.rollback() 
+- when 'moving' to another queue, always create a new object!
+  
+
 Commands are sored in the commands set. The last command is the topmost, previous commands are 
 chained with the 'prev' attribute. 
 
    {
-        cmd: { id: '', payload: {} },
-        prev: { 
-            cmd: { id: '', payload: {} },
-            prev: { 
-                ...
-            }
-        }
+        cmd: 'name' 
+        id: '', 
+        payload: {},
+        control: {}
    } 
 
 ## Queries
