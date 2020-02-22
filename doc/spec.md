@@ -50,9 +50,13 @@ If it is an extension to another context it can provide where its plugs in
 - imports from parent context
 - publish overrides and extensions
 
-## Responsibilitites
+## Responsibilities
 Builds a scope for each responsibility. Domain Events are sent via the global scope.
 --> responsibility scopes in matter
+
+## User scoped responsibilities
+Tuple for user (client) and service to enable 'remote' commands
+Shared user entities with the services for processing of commands 
  
 ## Bounded contexts
 --> strategic design (structure)
