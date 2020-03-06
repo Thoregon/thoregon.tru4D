@@ -54,9 +54,15 @@ If it is an extension to another context it can provide where its plugs in
 Builds a scope for each responsibility. Domain Events are sent via the global scope.
 --> responsibility scopes in matter
 
-## User scoped responsibilities
-Tuple for user (client) and service to enable 'remote' commands
+### Distributed Responsibility
+Command is created by one node but will be processed by another.
+Tuple for 'client node' & 'contractor node' (service).
+Visibility between client and contractor
+
+### User scoped responsibilities
+Tuple for 'user' & 'contractor node' (service) to enable 'remote' commands
 Shared user entities with the services for processing of commands 
+Visibility between user (all user nodes) and contractor
  
 ## Bounded contexts
 --> strategic design (structure)
