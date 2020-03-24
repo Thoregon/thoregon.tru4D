@@ -82,7 +82,14 @@ Defines transaction boundaries. Collection of commands for a (group of) entities
 Includes all changes that must be consistent after the transaction.
 
 ## Domain Event
-After a command is successfully processed, inform all interested listeners
+After a command is successfully processed, inform all interested listeners.
+
+### Inbound Events
+This type of event can only be observed within the bounded context. Use to ensure consistency etc.
+
+### Outbound Events
+Can be observed within the universe. Use to enhance features and enable relationships between
+bounded contexts.
 
 ## Process
 
