@@ -22,6 +22,5 @@
   "dependencies": {
     "cuid": "^2.1.6"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
