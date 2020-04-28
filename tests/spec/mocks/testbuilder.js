@@ -4,7 +4,7 @@
  * @author: blukassen
  */
 
-const Builder = require('evolux.tru4D/lib/builder');
+const Builder = require('thoregon.tru4D/lib/builder');
 
 class TestBuilder extends Builder {
 

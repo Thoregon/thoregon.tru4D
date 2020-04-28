@@ -67,7 +67,26 @@ Visibility between user (all user nodes) and contractor
 ## Bounded contexts
 --> strategic design (structure)
 A bounded context can be based on another (inherit), also reducing props and funcs.
-Bounded cotnexts can cooperate in a network manner.
+Bounded contexts can cooperate in a network manner.
+
+To deploy a meta bounded context create a pair to sign the deployment. 
+
+    $ vault -p <pair_id> <passphrase> <./myvaults/vault.tvs>
+
+To deploy a bounded context instance create a secret (128 characters). This secret is used as passphrase to encode the
+instances generated key pair. 
+
+    $ vault -s <secret_id> <passphrase> <./myvaults/vault.tvs>
+
+### Scopes
+
+- user  (default)
+- ctx
+- device
+
+- Collections
+- Commands
+
 
 Define also Context-Mapping (Anti Corruption Layer)
 
@@ -91,7 +110,17 @@ This type of event can only be observed within the bounded context. Use to ensur
 Can be observed within the universe. Use to enhance features and enable relationships between
 bounded contexts.
 
-## Process
+## Commands
+
+- get command from bounded context instance
+    - from metaboundedcontext with boundedcontext id
+    - is user allowed or 
+    - public command 
+- commit command
+    - add to current or append to pending (encoded)
+    - 
+
+### Process
 
 - 1 command -> commit
 - 2 store command in matter

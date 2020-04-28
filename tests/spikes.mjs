@@ -3,7 +3,7 @@
  *
  * @author: Bernhard Lukassen
  */
-import { CreateCommand } from "/evolux.tru4D";
+import { CreateCommand } from "/thoregon.tru4D";
 
 class Test {
 

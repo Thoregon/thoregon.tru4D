@@ -4,7 +4,7 @@
  * @author: blukassen
  */
 
-import { CreateCommand } from "/evolux.tru4D";
+import { CreateCommand } from "/thoregon.tru4D";
 
 test("should not be full implemented", async () => {
     const cc = new CreateCommand();

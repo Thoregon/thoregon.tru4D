@@ -1,5 +1,5 @@
 {
-  "name": "evolux.tru4D",
+  "name": "thoregon.tru4D",
   "version": "1.0.0",
   "description": "true Distributed Domain Driven Design",
   "main": "index.mjs",
@@ -10,16 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Thoregon/evolux.tru4D.git"
+    "url": "git+https://github.com/Thoregon/thoregon.tru4D.git"
   },
   "keywords": [],
   "author": "Bernhard Lukassen <bl@bernhard-lukassen.com> (http://www.bernhard-lukassen.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Thoregon/evolux.tru4D/issues"
+    "url": "https://github.com/Thoregon/thoregon.tru4D/issues"
   },
-  "homepage": "https://github.com/Thoregon/evolux.tru4D#readme",
+  "homepage": "https://github.com/Thoregon/thoregon.tru4D#readme",
   "dependencies": {
+    "@sindresorhus/is": "^2.1.0",
     "cuid": "^2.1.6"
   },
   "devDependencies": {}
