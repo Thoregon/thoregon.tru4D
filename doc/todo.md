@@ -5,6 +5,14 @@ ToDo
     - bounded contexts
     - observers which builds commands
     - Achtung! Gun nodes referenzieren!
+    - everblack -> bounded contexts  -> Gun.chain.boundedcontext = (...) => { }
+
+- Bounded Context
+    - publish API
+        - commands
+        - event listeners
+    - permissions
+        - commands, events
 
 - collect all changes of persistent stores in a transaction
     - apply it at once
