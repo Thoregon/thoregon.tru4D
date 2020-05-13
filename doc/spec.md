@@ -10,6 +10,7 @@ Building blocks:
 - Choreography --> [orchestration vs choreography](https://stackoverflow.com/questions/4127241/orchestration-vs-choreography)
     - a context is built up from its parts (choreography)
     - no dedicated composition for a context exists (orchestration)
+    - anti package pattern, don't build monolithic packages
 - Context (Bounded Context)
     - can be wrappend as a component
     - contains at least one aggregate
@@ -29,8 +30,15 @@ Building blocks:
 - Control: State changes of other components, e.g. if a user tends to modify an inputfield (focus), others gets informed
 that this field may me modified (like google docs, sheets)
 - Domain Event
+    - emited by bounded context
+    - listen to event
+        - other bc
+        - other responsibility in same bc
+        - need grant 
 - Actions
+    - multiple actions for command
     - can be attached to command and domain events
+    - will be executed in the same 'responsibility' context
     - run async, can't stop processing of a command or event
     - define an escalation procedure
 - Model
