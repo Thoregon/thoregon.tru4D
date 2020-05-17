@@ -7,14 +7,20 @@ ToDo
     - Achtung! Gun nodes referenzieren!
     - everblack -> bounded contexts  -> Gun.chain.boundedcontext = (...) => { }
 
-- Bounded Context
+- Bounded Context public API 
     - publish API
         - commands
-        - event listeners
+        - events
     - permissions
         - commands, events
 
-- collect all changes of persistent stores in a transaction
+- BoundedContexts
+    - commands with multiple responsibilities
+    - collections with multiple schemas, e.g. class hierarchy
+
+- Import Schemas and bounded contexts from OpenAPI (Swagger)
+
+- collect all changes of persistent stores in an aggregate (transaction)
     - apply it at once
 
 - key, index, tags

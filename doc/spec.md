@@ -11,8 +11,8 @@ Building blocks:
     - a context is built up from its parts (choreography)
     - no dedicated composition for a context exists (orchestration)
     - anti package pattern, don't build monolithic packages
-- Context (Bounded Context)
-    - can be wrappend as a component
+- Bounded Context
+    - is a distributed component
     - contains at least one aggregate
     - defines a section of another context 
         - can be imagined simmilar to GraphQL, but can also reuse behavior
@@ -175,3 +175,9 @@ chained with the 'prev' attribute.
 
 Get object models based on bounded context spec: Schema, refs to other Entities, relation objects between entities
 Provide mirrors for other frameworks like VUE
+
+## Views
+
+Make a view on a bounded context public
+- commands
+- events
