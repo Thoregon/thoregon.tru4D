@@ -5,18 +5,23 @@ ToDo
     - bounded contexts
     - observers which builds commands
     - Achtung! Gun nodes referenzieren!
-    - everblack -> bounded contexts  -> Gun.chain.boundedcontext = (...) => { }
+    - everblack -> bounded contexts  -> Gun.chain.boundedcontext = (...) => { }    
 
-- Bounded Context public API 
+- BoundedContexts
+    - distribution plan, which node processes which responsibilities
+        - ! Caution: don't just collect the installes responsibilties, a command may be mandated on one node but processed on another
+    - commands with multiple responsibilities
+    - collections with multiple schemas, e.g. class hierarchy
+
+- Meat Bounded Context public API 
     - publish API
         - commands
         - events
     - permissions
         - commands, events
 
-- BoundedContexts
-    - commands with multiple responsibilities
-    - collections with multiple schemas, e.g. class hierarchy
+- command w/o responsibility
+    - different actions on different nodes
 
 - Import Schemas and bounded contexts from OpenAPI (Swagger)
 
