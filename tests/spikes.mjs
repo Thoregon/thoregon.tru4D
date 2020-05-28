@@ -3,6 +3,13 @@
  *
  * @author: Bernhard Lukassen
  */
+
+import path from 'path';
+const makeapi       = (path) => path.startsWith('/') ? path : `/${path}`;
+
+console.log(makeapi(path.join('thatsme.api/', 'sidrequest')));
+
+/*
 import { CreateCommand } from "/thoregon.tru4D";
 
 class Test {
@@ -19,6 +26,7 @@ class Test {
 class CreateTest extends CreateCommand {
 
 }
+*/
 
 
 
