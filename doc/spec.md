@@ -86,22 +86,18 @@ instances generated key pair.
 
     $ vault -s <secret_id> <passphrase> <./myvaults/vault.tvs>
 
+(Meta) Bounded Contexts are not limited to the component where they are defined.
+(Meta) Bounded Contexts can be extended by other components if the owner has the permission. 
+
 ### Scopes
 
 - user  (default)
 - ctx
 - device
 
-- Collections
-- Commands
-
-
 Define also Context-Mapping (Anti Corruption Layer)
 
 Shared Kernel/Open Host Service
-
-## Commands
-Is an invocation as an object. Will be stored in the event store in matter 
 
 ## Aggregates
 --> tactical design (procedure)
@@ -119,6 +115,7 @@ Can be observed within the universe. Use to enhance features and enable relation
 bounded contexts.
 
 ## Commands
+Is an invocation as an object. Will be stored in the event store in matter 
 
 - get command from bounded context instance
     - from metaboundedcontext with boundedcontext id
@@ -127,6 +124,9 @@ bounded contexts.
 - commit command
     - add to current or append to pending (encoded)
     - 
+- shedule commands
+    - enqueue commands at a specific scedule
+    - check condition before exec of the command to check if the command needs to run 
 
 ### Process
 
@@ -178,6 +178,14 @@ Provide mirrors for other frameworks like VUE
 
 ## Views
 
-Make a view on a bounded context public
+Make a view on a bounded context as public interface
+- entities
 - commands
 - events
+
+# Conventions
+Components can deliver bounded contexts
+- meta bounded contexts (classes)
+- bounded contexts instances
+
+The 'contexts' directory

@@ -8,6 +8,11 @@ import Repository                           from "./lib/repository.mjs";
 import BoundedContextBuilder                from "./lib/ctx/boundedcontextbuilder.mjs";
 
 /*
+ * publish ubiquitous definitions etc.
+ */
+export *                                    from './lib/ubiqutious.mjs';
+
+/*
  * basic commands
  */
 export { default as Command }               from './lib/command/command.mjs';
