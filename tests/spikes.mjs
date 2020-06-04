@@ -3,7 +3,7 @@
  *
  * @author: Bernhard Lukassen
  */
-const REF = Symbol('REF');
+const REF = Symbol.for('REF');
 let item = { a: 'A', b: 'B' };
 let node = { node: 'Node' };
 Object.defineProperty(item, REF, { value: node,  configurable: false, enumerable: false, writable: false })
