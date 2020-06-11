@@ -7,6 +7,9 @@ ToDo
     - Achtung! Gun nodes referenzieren!
     - everblack -> bounded contexts  -> Gun.chain.boundedcontext = (...) => { }    
 
+- KARTE extension
+    - findBoundedContext
+
 - BoundedContexts
     - distribution plan, which node processes which responsibilities
         - ! Caution: don't just collect the installes responsibilties, a command may be mandated on one node but processed on another
