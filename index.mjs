@@ -15,6 +15,7 @@ export *                                    from './lib/ubiqutious.mjs';
 /*
  * basic commands
  */
+export { default as CommandBuilder }        from './lib/command/commandbuilder.mjs';
 export { default as Command }               from './lib/command/command.mjs';
 export { default as CreateCommand }         from './lib/command/createcommand.mjs';
 export { default as ModifyCommand }         from './lib/command/modifycommand.mjs';
