@@ -77,6 +77,9 @@ Visibility between user (all user nodes) and contractor
 A bounded context can be based on another (inherit), also reducing props and funcs.
 Bounded contexts can cooperate in a network manner.
 
+Bounded contexts can be split into responsibilities. This allows to deploy a bounded context
+to multiple peers, 
+
 To deploy a meta bounded context create a pair to sign the deployment. 
 
     $ vault -p <pair_id> <passphrase> <./myvaults/vault.tvs>
