@@ -13,6 +13,13 @@ import BoundedContextBuilder                from "./lib/ctx/boundedcontextbuilde
 export *                                    from './lib/ubiqutious.mjs';
 
 /*
+ * storage
+ */
+
+// export { default as StoreModel }            from './lib/store/storemodel.mjs';
+// export { default as CollectionStoreModel }  from './lib/store/collectionstoremodel.mjs';
+
+/*
  * basic commands
  */
 export { default as CommandBuilder }        from './lib/command/commandbuilder.mjs';
