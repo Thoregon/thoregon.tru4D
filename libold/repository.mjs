@@ -42,7 +42,7 @@ import KarteMBCHandler                      from "./query/kartembchandler.mjs";
 
 import { tservices, timeout, doAsync }      from "/evolux.universe";
 
-export default class Repository extends RepoMirror(Reporter(EventEmitter), 'dddd') {
+    export default class Repository extends RepoMirror(Reporter(EventEmitter), 'dddd') {
 
     constructor() {
         super();
