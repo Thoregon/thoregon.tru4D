@@ -26,7 +26,7 @@ ToDo
 - command w/o responsibility
     - different actions on different nodes
 
-- Import Schemas and bounded contexts from OpenAPI (Swagger)
+- Import Schemas and bounded contexts from OpenAPI (Swagger) & AsyncAPI
 
 - collect all changes of persistent stores in an aggregate (transaction)
     - apply it at once
