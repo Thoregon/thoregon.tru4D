@@ -30,7 +30,7 @@ if (!Array.aForEach) Object.defineProperty(Array.prototype, 'aForEach', {
             .icon("smily.png")
         .attributes()
             .string     ( "shortName" )
-                .notnull()
+                .mandatory()
             .string     ( "subline" )
             .image      ( "image169" )
             .image      ( "imageIcon" )
