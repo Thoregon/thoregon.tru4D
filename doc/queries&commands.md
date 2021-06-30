@@ -1,7 +1,9 @@
 Preface
 =======
 
-Commands and Queries represents the persistence 
+Commands and Queries represents the persistence.
+Avoid thinking in relational DB models anymore. 
+Matter works like a network graph DB.
 
 There is a default processing how entities gets stored 
 and queries im universe matter.
@@ -30,7 +32,7 @@ const cmd = ctx.command("CreateEntity");
 
 ````js
 const ctx   = dorifer.context('myctx');
-const query = ctx.query( "EntiryQuery");
+const query = ctx.query( "EntityQuery");
 
 // query by index
 
@@ -63,6 +65,9 @@ Prerequisites:
 - references
     - ref/embedd ... objects in properties as own entities or embedded in the top entity
     - the references specification can be defined fine grained for each property 
+- versions
+    - keep old versions
+    - log modifications
 
 ## Indexes
 

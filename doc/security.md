@@ -1,7 +1,10 @@
 Security, Encryption & Permissions
 ==================================
 
+## BSI
 
+- [BSI Grundschutz Kompendium](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/IT-Grundschutz-Kompendium/it-grundschutz-kompendium_node.html)
+- [BSI Standards](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/BSI-Standards/bsi-standards_node.html)
 
 ## Permissions
 to a bounded context several roles can be defined.
