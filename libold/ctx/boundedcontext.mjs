@@ -423,7 +423,7 @@ export default class BoundedContext extends Reporter(EventEmitter) {
                 path = 'context';
                 break;
             case 'private':             // private for the user
-                let id = universe.identity.root;    // users root node
+                let id = me.root;    // users root node
                 let node = id[ctxid].collections[name];
                 return node;
                 // break;
