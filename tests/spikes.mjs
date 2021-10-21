@@ -3,6 +3,7 @@
  *
  * @author: Bernhard Lukassen
  */
+
 const REF = Symbol.for('REF');
 let item = { a: 'A', b: 'B' };
 let node = { node: 'Node' };
