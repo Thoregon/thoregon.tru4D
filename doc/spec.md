@@ -11,6 +11,7 @@ Building blocks:
     - a context is built up from its parts (choreography)
     - no dedicated composition for a context exists (orchestration)
     - anti package pattern, don't build monolithic packages
+    --> https://geekexplains.blogspot.com/2008/07/ways-of-combining-web-services.html
 - Bounded Context
     - is a distributed component
     - contains at least one aggregate
