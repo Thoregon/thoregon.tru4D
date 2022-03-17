@@ -8,12 +8,12 @@
 
 import SchemaBuilder from "../lib/schema/builder/schemabuilder.mjs";
 
-if (!Array.aForEach) Object.defineProperty(Array.prototype, 'aForEach', {
+if (!Array.asyncForEach) Object.defineProperty(Array.prototype, 'asyncForEach', {
     configurable: false,
     enumerable: false,
     // writable: false,
-    value: async function aForEach(fn) {    // don't use () => {} because it binds this to undefined!
-        for await ( let item of this ) {
+    value: async function asyncForEach(fn) {    // don't use () => {} because it binds this to undefined!
+        for await (const item of this) {
             await fn(item);
         }
     }
