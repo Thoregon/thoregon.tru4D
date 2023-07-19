@@ -19,5 +19,5 @@ export { default as Query }   from './lib/query.mjs';
 // export { default as QueryResolverMckup } from './lib/queryresolvermckup.mjs';
 
 // create the true4D repository and service
-export default new T4D();
+// export default new T4D();
 
