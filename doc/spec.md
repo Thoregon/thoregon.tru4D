@@ -18,6 +18,7 @@ Building blocks:
     - defines a section of another context 
         - can be imagined simmilar to GraphQL, but can also reuse behavior
     - In addition, the bounded context can be composed of several other contexts
+    - allow view with different structure to the base context like GraphQL/supergraph
 - Aggregates
     - comarable to a transaction (microservice) 
     - Actor 
