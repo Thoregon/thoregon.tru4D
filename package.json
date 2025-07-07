@@ -19,5 +19,8 @@
     "url": "https://github.com/Thoregon/thoregon.tru4D/issues"
   },
   "homepage": "https://github.com/Thoregon/thoregon.tru4D#readme",
-  "devDependencies": {}
+  "dependencies": {
+    "cron-parser": "^5.2.0",
+    "temporal-polyfill": "^0.3.0"
+  }
 }
