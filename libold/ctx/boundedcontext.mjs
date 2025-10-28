@@ -76,7 +76,7 @@
 
 import { doAsync }                          from "/evolux.universe";
 import { forEach, className }               from "/evolux.util";
-import { EventEmitter}                      from "/evolux.pubsub";
+import { EventEmitter}                      from "/evolux.util/lib/eventemitter.mjs";
 import { Reporter, EError, emsg }           from "/evolux.supervise";
 import Collection                           from "../collection/collection.mjs";
 import Command                              from "../command/command.mjs";

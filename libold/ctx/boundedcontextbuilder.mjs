@@ -11,7 +11,7 @@ import {
 }                               from '/evolux.util';
 // import { Types }                from '/evolux.schema';
 import { tservices }            from "/evolux.universe";
-import { EventEmitter}          from "/evolux.pubsub";
+import { EventEmitter}          from "/evolux.util/lib/eventemitter.mjs";
 import { Reporter }             from "/evolux.supervise";
 
 import MetaBoundedContext       from "./metaboundedcontext.mjs";

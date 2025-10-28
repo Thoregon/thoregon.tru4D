@@ -51,7 +51,7 @@
 
 import { forEach }              from '/evolux.util';
 import { doAsync }              from '/evolux.universe';
-import { EventEmitter}          from "/evolux.pubsub";
+import { EventEmitter}          from "/evolux.util/lib/eventemitter.mjs";
 import { Reporter }             from "/evolux.supervise";
 import { REF }                  from "/evolux.matter";
 

@@ -31,7 +31,7 @@
  * @author: Bernhard Lukassen
  */
 
-import { EventEmitter}                      from "/evolux.pubsub";
+import { EventEmitter}                      from "/evolux.util/lib/eventemitter.mjs";
 import { Reporter }                         from "/evolux.supervise";
 import { RepoMirror, parts, forEach }       from "/evolux.util";
 import { ErrNoPersistenceProvider }         from "./errors.mjs";
