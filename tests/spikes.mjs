@@ -21,7 +21,7 @@ const makeapi       = (path) => path.startsWith('/') ? path : `/${path}`;
 console.log(makeapi(path.join('thatsme.api/', 'sidrequest')));
 
 
-import { CreateCommand } from "/thoregon.tru4D";
+import { CreateCommand } from "/thoregon.aurora/index.mjs";
 
 class Test {
 
